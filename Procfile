@@ -1,1 +1,1 @@
-web: python -c "import nltk; nltk.download('stopwords'); nltk.download('punkt'); nltk.download('wordnet')" && gunicorn app:app
+web: python download_nltk_data.py && gunicorn --bind 0.0.0.0:$PORT app:app
