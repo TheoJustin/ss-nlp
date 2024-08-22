@@ -34,6 +34,11 @@ def preprocess_text(text):
     ]
     return FreqDist(clean)
 
+@app.route('/ping', methods=['GET'])
+def ping():
+    return "pong"
+
+
 @app.route('/analyze', methods=['POST'])
 def analyze():
     data = request.json
