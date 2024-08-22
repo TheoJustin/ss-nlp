@@ -45,6 +45,3 @@ def analyze():
     result = classifier.classify(features)
     
     return jsonify({'comment': comment, 'classification': result})
-
-if __name__ == '__main__':
-    app.run()
